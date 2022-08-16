@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "gender": 0,
+      "point": 9,
+      "address": "Long An"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Thị B",
+      "gender": 1,
+      "point": 10,
+      "address": "HCM"
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Văn C",
+      "gender": 0,
+      "point": 8,
+      "address": "Hà Nội"
+    }
+  ]
+}

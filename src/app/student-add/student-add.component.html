@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<div class="container">
+    <h1>Thêm sinh viên</h1>
+    <form #frmSP="ngForm" class="col-6 m-auto" (ngSubmit)="addStudent(frmSP.value)">
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input name="name" class="form-control" type="text" [(ngModel)]="name"
+            required minlength="4" #error_name="ngModel"> 
+        </div>
+        <div>
+          <span *ngIf="error_name.errors?.['required']" class="text-danger">Bạn chưa nhập họ tên sinh viên!</span>
+          <span *ngIf="error_name.errors?.['minlength']" class="text-danger">Tên sinh viên cần ít nhất 4 ký tự!</span>
+        </div>
+        </div> -->
+        <div class="form-group">
+          <label>Địa chỉ</label>
+          <input name="address" class="form-control" type="text" [(ngModel)]="address" 
+            required minlength="4" #error_address="ngModel"> 
+        </div>
+        <div>
+          <span *ngIf="error_address.errors?.['required']" class="text-danger">Bạn chưa nhập địa chỉ!</span>
+        </div>
+        <div class="form-group">
+            <label>Điểm</label>
+            <input name="point" class="form-control" type="number" [(ngModel)]="point" 
+              required minlength="0" maxlength="10" #error_point="ngModel"> 
+        </div>
+        <div>
+          <span *ngIf="error_point.errors?.['required']" class="text-danger">Bạn chưa nhập điểm!</span>
+        </div>
+        <button type="submit" class="btn btn-success">Thêm</button>
+    </form>
+</div>
